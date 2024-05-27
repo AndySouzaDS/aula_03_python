@@ -5,13 +5,15 @@
 # forem positivos ou "Dados inválidos" caso contrário.
 
 # preciso avaliar as variáveis: quantidade e preço
-quantidade = 40
-preco = 20
 
-if quantidade > 0 and preco > 0:
-    print('Valores Válidos!')
-else:
-    print('Valores Inválidos!')
+## RESPOSTA
+# quantidade = 40
+# preco = 20
+
+# if quantidade > 0 and preco > 0:
+#     print('Valores Válidos!')
+# else:
+#     print('Valores Inválidos!')
 
 ### Exercício 2: Classificação de Dados de Sensor
 # Imagine que você está trabalhando com dados de sensores IoT. 
@@ -39,8 +41,41 @@ else:
 ### Exercício 6. Contagem de Palavras em Textos
 # Objetivo:** Dado um texto, contar quantas vezes cada palavra única aparece nele.
 
+# # RESPOSTA
+# texto = 'hoje e nossa segunda aula do bootcamp, bootcamp de python'
+
+# novo_texto = texto.replace(',', '')
+# lista_texto = novo_texto.split()
+
+# contagem_de_palavras = {}
+# for palavra in lista_texto:    
+#     if palavra not in contagem_de_palavras:
+#         contagem_de_palavras[palavra] = 1
+#     else:
+#         contagem_de_palavras[palavra] += 1 
+
+# print(contagem_de_palavras)
+
+
 ### Exercício 7. Normalização de Dados
 # Objetivo:** Normalizar uma lista de números para que fiquem na escala de 0 a 1.
+valores = [20, 14, 78, 17, 42, 2, 98]
+valores_normalizados = []
+
+for valor in valores:
+    valor = (valor - min(valores)) / (max(valores) - min(valores))
+    valores_normalizados.append(valor)
+
+print(valores_normalizados)
+print(f'Solução 1: {valores_normalizados}')
+
+## RESPOSTA 2
+min_val = min(valores)
+max_val = max(valores)
+
+valores_normalizados2 = [(x - min_val) / (max_val - min_val) for x in valores]
+
+print(f'Solução 2: {valores_normalizados2}')
 
 ### Exercício 8. Filtragem de Dados Faltantes
 # Objetivo:** Dada uma lista de dicionários representando dados de usuários, filtrar aqueles que têm um campo específico faltando
